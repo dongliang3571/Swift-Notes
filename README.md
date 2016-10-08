@@ -87,3 +87,38 @@
   
   let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
   ```
+  
+  
+  ```swift
+  class ShoppingListItem: RecipeIngredient {
+    var purchased = false
+    var description: String {
+        var output = "\(quantity) x \(name)"
+        output += purchased ? " ✔" : " ✘"
+        return output
+    }
+  }
+  
+  /*
+  Because it provides a default value for all of the properties it introduces and does 
+  not define any initializers itself, ShoppingListItem automatically inherits all of the 
+  designated and convenience initializers from its superclass.
+  */
+  
+  
+  var breakfastList = [
+    ShoppingListItem(),
+    ShoppingListItem(name: "Bacon"),
+    ShoppingListItem(name: "Eggs", quantity: 6),
+  ]
+  breakfastList[0].name = "Orange juice"
+  breakfastList[0].purchased = true
+  for item in breakfastList {
+      print(item.description)
+  }
+  // 1 x Orange juice ✔
+  // 1 x Bacon ✘
+  // 6 x Eggs ✘
+
+  ````
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
