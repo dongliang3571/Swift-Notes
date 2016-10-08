@@ -57,6 +57,9 @@
   }
   ```
   
+ 
+![initliazer_delegation](https://github.com/dongliang3571/Swift-Notes/blob/master/images/initliazer_delegation.png?raw=true)
+  
   - Automatic Initializer Inheritance
     
   ```swift
@@ -88,7 +91,8 @@
   let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
   ```
   
-  
+![initliazer_delegation](https://github.com/dongliang3571/Swift-Notes/blob/master/images/automatic_initializer_inheritance.png?raw=true)
+
   ```swift
   class ShoppingListItem: RecipeIngredient {
     var purchased = false
@@ -121,4 +125,4 @@
   // 6 x Eggs ✘
 
   ````
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![inherit_all_init](https://github.com/dongliang3571/Swift-Notes/blob/master/images/inherit_all_init.png?raw=true)
