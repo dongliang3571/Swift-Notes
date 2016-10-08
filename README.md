@@ -32,6 +32,9 @@
         self.name = name
     }
     
+    //  You can have more than one designated initializer,
+    //  but usually we have one, and multiple convenient init
+    
     convenience init() {  // This is a convenient initializer
         self.init(name: "[Unnamed]")
     }
