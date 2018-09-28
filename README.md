@@ -137,6 +137,22 @@
 1. Navigation Bar
   - The back button on navigation bar belongs to the previous view controller, not the one currently presented on screen.
 To modify the back button you should update it before pushing, on the view controller that initiated the segue
+  ```swfit
+  // Set up back button(backBarButtonItem) and back indicator image
+  // This is done on parent view of the view we segue to, because back button and back indicator image belong to parent view
+  self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: ImageName.BACK_ICON.rawValue)
+  self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: ImageName.BACK_ICON.rawValue)
+  self.navigationItem.title = "POs" // this will be the text for back button text
+  self.navigationItem.backBarButtonItem?.tintColor = FMCheckColor.Red // change color of back button
+  
+  // However self.navigationItem.leftBarButtonItem and self.navigationItem.rightBarButtonItem belongs to current view
+  // if you want to overwrite leftBarButtonItem
+  let item = UIBarButtonItem(title: "Text goes here", style: .Plain, target: self, action:  #selector(self.navigationController?.popViewControllerAnimated(_:)))
+
+  item.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Helvetica-Bold", size: 23)!], forState: .Normal)
+  navigationItem.leftBarButtonItem = item // over write left button
+  navigationItem.rightBarButtonItem = item // over write right button
+  ```
 
 2. Frame and bound
   - https://gabrielghe.github.io/swift/2015/03/22/swift-uiview-bounds-vs-frame-vs-center
