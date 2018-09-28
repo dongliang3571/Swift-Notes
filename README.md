@@ -129,3 +129,14 @@
 
   ````
 ![inherit_all_init](https://github.com/dongliang3571/Swift-Notes/blob/master/images/inherit_all_init.png?raw=true)
+
+
+### Things I need to know
+
+
+1. Navigation Bar
+  - The back button on navigation bar belongs to the previous view controller, not the one currently presented on screen.
+To modify the back button you should update it before pushing, on the view controller that initiated the segue
+
+2. Frame and bound
+  - https://gabrielghe.github.io/swift/2015/03/22/swift-uiview-bounds-vs-frame-vs-center
