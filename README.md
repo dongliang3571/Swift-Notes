@@ -156,3 +156,20 @@ To modify the back button you should update it before pushing, on the view contr
 
 2. Frame and bound
   - https://gabrielghe.github.io/swift/2015/03/22/swift-uiview-bounds-vs-frame-vs-center
+  
+  ```swift
+  // To get width and height of a view
+  let width = view.frame.size.width
+  // or
+  let width = view.frame.width
+  // or
+  let width = view.bounds.width
+  
+  // to get height
+  let height = view.frame.size.height
+  
+  // to get x and y
+  let x = view.frame.origin.x
+  let y = view.frame.origin.y
+  
+  ```
