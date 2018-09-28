@@ -173,3 +173,29 @@ To modify the back button you should update it before pushing, on the view contr
   let y = view.frame.origin.y
   
   ```
+
+3. View Management
+  ```swift
+  // view method precedence:
+  func loadView();
+  func viewDidLoad();
+  func viewWillAppear();
+  func viewDidAppear();
+  func viewWillLayoutSubviews();
+  func viewDidLayoutSubviews();
+
+  // You should not initialise UI geometry-related things in viewDidLoad, because the geometry of your view is not set at this point and the results will be unpredictable.
+
+  // viewWillAppear: is the correct place to do these things, at this point the geometry is set so getting and setting geometry-related properties makes sense."
+
+  // This also applies to getting geometry-related properties. Don't get distracted by it's behaving correctly in one circumstance and not in another... The main point is that setting/getting geometry properties too early will yield unpredictable results.
+
+  // Your screen looks correct because you are seeing the results after viewWillAppear: / viewDidAppear:.
+
+
+  // When using autolayout in ios6, frames are not set until subviews have been laid out. The right place to get frame data under these conditions is in the viewController method viewDidLayoutSubviews.
+
+  // This is called after viewWillAppear:. But take care - they are not always called together. For example, viewDidLayoutSubviews is called after a rotation, viewWillAppear: is not. viewWillAppear: is called every time a view becomes the visible view*, viewDidLayoutSubviews not necessarily (only if the views needed relaying out).
+
+  // (* unless the app was backgrounded and is becoming the foreground app, then viewWillAppear: is not called)
+```
