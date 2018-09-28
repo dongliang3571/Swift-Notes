@@ -137,7 +137,7 @@
 1. Navigation Bar
   - The back button on navigation bar belongs to the previous view controller, not the one currently presented on screen.
 To modify the back button you should update it before pushing, on the view controller that initiated the segue
-  ```swfit
+  ```swift
   // Set up back button(backBarButtonItem) and back indicator image
   // This is done on parent view of the view we segue to, because back button and back indicator image belong to parent view
   self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: ImageName.BACK_ICON.rawValue)
