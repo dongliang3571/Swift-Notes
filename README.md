@@ -232,3 +232,6 @@ To modify the back button you should update it before pushing, on the view contr
   // look this link: https://stackoverflow.com/questions/20731360/strange-uisearchdisplaycontroller-view-offset-behavior-in-ios-7-when-embedded-in
   // self.definesPresentationContext = true
   ```
+5. XCode Simulator
+
+  - If your app cannot run after first run(can launch the app from XCode the first time, but cannot launch second time without deleting the app from simulator). It give you error like `this app could not be installed at this time` or `Could not hardlink copy`. You need to open `info.plist` and make sure you have both `CFBundleShortVersionString` and `CFBundleVersion` and their values. If you still have same problem even you have these two keys, try to move to the top of the `info.plist`.
