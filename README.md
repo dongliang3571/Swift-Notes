@@ -133,6 +133,7 @@
 
 ### Things I need to know
 
+https://github.com/codepath/ios_guides/wiki
 
 1. Navigation Bar
   - The back button on navigation bar belongs to the previous view controller, not the one currently presented on screen.
