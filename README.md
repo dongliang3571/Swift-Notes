@@ -235,3 +235,34 @@ To modify the back button you should update it before pushing, on the view contr
 5. XCode Simulator
 
   - If your app cannot run after first run(can launch the app from XCode the first time, but cannot launch second time without deleting the app from simulator). It give you error like `this app could not be installed at this time` or `Could not hardlink copy`. You need to open `info.plist` and make sure you have both `CFBundleShortVersionString` and `CFBundleVersion` and their values. If you still have same problem even you have these two keys, try to move to the top of the `info.plist`.
+
+6. Edge Insets
+
+  ```
+  // If your scroll view looks off, this is probably the reason
+  automaticallyAdjustsScrollViewInsets = true
+  
+  // Sets current view controller as presenting view controller for the search interface
+  definesPresentationContext = true
+  
+  // tells what edges should be extended (left, right, top, bottom, all, none or any combination of those). Extending bottom edge equals "Under Bottom Bars" tick, extending top edge equals "Under Top Bars" tick.
+  edgesForExtendedLayout = [.top, .bottom, .left, .right, .all] // to set to none, you can do [] empty array
+  
+
+  //tells if edges should be automatically extended under the opaque bars. So if you combine those two settings you can mimic any combination of interface builder ticks in your code.
+  extendedLayoutIncludesOpaqueBars  = true // default value is false, Bars are translucent by default in iOS 7.0
+  ```
+
+7. Search bar
+
+  ```
+  // A better way to embed search bar
+  if #available(iOS 11.0, *) {
+    // embed in the navigation bar
+    navigationItem.searchController = searchController
+    navigationItem.hidesSearchBarWhenScrolling = false
+  } else {
+    // embed in table view 
+    tableView.tableHeaderView = searchController.searchBar
+  }
+  ```
