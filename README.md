@@ -282,7 +282,8 @@ To modify the back button you should update it before pushing, on the view contr
   // are not trigger by UITableViewCell.setSelected(Bool, animate: Bool), it only gets triggered off
   // by physically clicking on screen.
   // If we want to select a row programmatically with didSelectRowAt and didDeSelectRowAt being called
-  // use 
+  // use UITableView.selectRow, because both didSelectRowAt and didDeSelectRowAt are UITableView-wide methods
   UITableView.selectRow(at: IndexPath, animated: Bool, scrollPosition: UITableViewScrollPosition)
+  
   
   ```
