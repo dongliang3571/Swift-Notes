@@ -215,7 +215,7 @@ To modify the back button you should update it before pushing, on the view contr
 
 4. `UISearchController` and `UISearchBar`
 
-  ```
+  ```swift
   // Search controller
   self.searchController = UISearchController(searchResultsController: nil)
   self.searchController.searchResultsUpdater = self
@@ -239,7 +239,7 @@ To modify the back button you should update it before pushing, on the view contr
 
 6. Edge Insets
 
-  ```
+  ```swift
   // If your scroll view looks off, this is probably the reason
   automaticallyAdjustsScrollViewInsets = true
   
@@ -257,7 +257,7 @@ To modify the back button you should update it before pushing, on the view contr
 7. `UISearchController` and `UISearchBar`
   A `UISearchController` is presenting an view controller, when doing `performSegue` or `popViewControllerAnimated`, make sure you dimiss the `UISearchController` first by doing, `UISearchController.dismiss()`
   
-  ```
+  ```swift
   // A better way to embed search bar
   if #available(iOS 11.0, *) {
     // embed in the navigation bar
@@ -266,5 +266,14 @@ To modify the back button you should update it before pushing, on the view contr
   } else {
     // embed in table view 
     tableView.tableHeaderView = searchController.searchBar
+  }
+  ```
+
+8. `UITableView` and `UITableViewCell`
+
+  ```swift
+  // by default, cell is gray when clicked, we want the gray color dims out after clicking
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      tableView.deselectRow(at: indexPath, animated: true)
   }
   ```
