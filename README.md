@@ -253,8 +253,9 @@ To modify the back button you should update it before pushing, on the view contr
   extendedLayoutIncludesOpaqueBars  = true // default value is false, Bars are translucent by default in iOS 7.0
   ```
 
-7. Search bar
-
+7. `UISearchController` and `UISearchBar`
+  A `UISearchController` is presenting an view controller, when doing `performSegue` or `popViewControllerAnimated`, make sure you dimiss the `UISearchController` first by doing, `UISearchController.dismiss()`
+  
   ```
   // A better way to embed search bar
   if #available(iOS 11.0, *) {
