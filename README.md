@@ -213,6 +213,12 @@ To modify the back button you should update it before pushing, on the view contr
 
   - Custom - You may implement your own custom segue and have complete control over its appearance and transition.
 
+  
+  ```swift
+  // Segues are components of storyboard. If you don't have a storyboard, you can't perform segues. But you can use present view controller like this:
+  let vc = ViewController() //your view controller
+  self.present(vc, animated: true, completion: nil)
+  ```
 4. `UISearchController` and `UISearchBar`
 
   ```swift
