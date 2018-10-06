@@ -290,4 +290,33 @@ To modify the back button you should update it before pushing, on the view contr
   // However UITableView.selectRow(at: IndexPath, animated: Bool, scrollPosition: UITableViewScrollPosition) is considered a better way to select a row
   
   
+  // Replace text label
+  class NoteTableCell: UITableViewCell {
+
+    // UI
+    var noteTextView = UITextView()
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    // When layout is ready
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        self.textLabel?.text = "test" // assign a random text so the text label is intialized
+        self.textLabel?.isHidden = true
+        self.noteTextView.frame = self.textLabel!.frame
+        self.noteTextView.text = "TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText"
+        self.contentView.addSubview(self.noteTextView)
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+}
+
   ```
