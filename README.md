@@ -323,3 +323,7 @@ To modify the back button you should update it before pushing, on the view contr
 9. Value type and Reference type
 
   https://medium.com/@abhimuralidharan/difference-between-value-type-and-a-reference-type-in-ios-swift-18cb5145ad7a
+
+10. `Any` and `AnyObject`
+
+https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
