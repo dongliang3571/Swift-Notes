@@ -360,6 +360,10 @@ https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
       self.present(vehicleTypeVC, animated: true, completion: nil)
   }
   
+  // other workarounds
+  DispatchQueue.main.async { // Manually wake up man runloop
+      self.present(vehicleTypeVC, animated: true, completion: nil)
+  }
   // More discussion about this problem is here
   // https://stackoverflow.com/questions/21075540/presentviewcontrolleranimatedyes-view-will-not-appear-until-user-taps-again/22173620
   ```
