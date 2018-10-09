@@ -319,6 +319,16 @@ To modify the back button you should update it before pushing, on the view contr
     }
 }
 
+  // Check mark should be clean in cellForRowAt if we using tableView.dequeueReusableCell, and checkmakr is set in didSelectRowAt, for example:
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+  }
+  
+  // In cellForRowAt
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseableCellName, for: indexPath as IndexPath)
+       cell.selectionStyle = .none // must set it to none before reuse, otherwise we will see multiple check marks
+  }
   ```
 9. Value type and Reference type
 
