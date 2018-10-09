@@ -327,3 +327,39 @@ To modify the back button you should update it before pushing, on the view contr
 10. `Any` and `AnyObject`
 
 https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
+
+11. problem of delay in presenting a view modally
+
+  ```
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell = UITableViewCell()
+      cell.selectionStyle = .none
+      
+      return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      let vehicleTypeVC = ServiceVehicleTypeSelectController()
+
+      self.present(vehicleTypeVC, animated: true, completion: nil)
+  }
+  
+  // we are presenting a view modally in didSelectRowAt, this is probably will cause delay in showing the view, or even worse not showing at all
+  
+  // the problem is with the cell's selectionStyle, so workaround is to set cell's selectionStyle to .default
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell = UITableViewCell()
+      cell.selectionStyle = .default
+      
+      return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      let vehicleTypeVC = ServiceVehicleTypeSelectController()
+
+      self.present(vehicleTypeVC, animated: true, completion: nil)
+  }
+  
+  // More discussion about this problem is here
+  // https://stackoverflow.com/questions/26469268/delay-in-presenting-a-modal-view-controller
+  ```
