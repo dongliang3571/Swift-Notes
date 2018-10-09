@@ -330,7 +330,7 @@ https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
 
 11. problem of delay in presenting a view modally
 
-  ```
+  ```swift
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = UITableViewCell()
       cell.selectionStyle = .none
@@ -361,5 +361,5 @@ https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
   }
   
   // More discussion about this problem is here
-  // https://stackoverflow.com/questions/26469268/delay-in-presenting-a-modal-view-controller
+  // https://stackoverflow.com/questions/21075540/presentviewcontrolleranimatedyes-view-will-not-appear-until-user-taps-again/22173620
   ```
