@@ -377,3 +377,10 @@ https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
   // More discussion about this problem is here
   // https://stackoverflow.com/questions/21075540/presentviewcontrolleranimatedyes-view-will-not-appear-until-user-taps-again/22173620
   ```
+12. Keyboard covers content in the view
+
+  ```swift
+  UITableViewController will push up content automatically.
+  UIViewController doesn't
+  so we need to use keyboard notification to set inset
+  ```
