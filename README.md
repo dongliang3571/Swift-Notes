@@ -384,3 +384,35 @@ https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
   UIViewController doesn't
   so we need to use keyboard notification to set inset
   ```
+  
+13. Container view programmatically
+
+```swift
+ // add container
+
+    let containerView = UIView()
+    containerView.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(containerView)
+    NSLayoutConstraint.activate([
+        containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+        containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+        containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
+        containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
+        ])
+
+    // add child view controller view to container
+
+    let controller = storyboard!.instantiateViewController(withIdentifier: "Second")
+    addChildViewController(controller)
+    controller.view.translatesAutoresizingMaskIntoConstraints = false
+    containerView.addSubview(controller.view)
+
+    NSLayoutConstraint.activate([
+        controller.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+        controller.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+        controller.view.topAnchor.constraint(equalTo: containerView.topAnchor),
+        controller.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+        ])
+
+    controller.didMove(toParentViewController: self)
+```
