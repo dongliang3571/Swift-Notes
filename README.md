@@ -416,3 +416,21 @@ https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
 
     controller.didMove(toParentViewController: self)
 ```
+
+14. get root view controller
+
+  ```swift
+  // if you set rootViewController in storyboard, you do:
+  let delegate = UIApplication.shared.delegate as? AppDelegate
+  if let root = delegate?.window?.rootViewController as? HomeController {
+      // root is the root view controller
+      // root.view can get the super view 
+  }
+  
+  // if you are trying to access the rootViewController you set in your appDelegate, you do
+  let appDelegate  = UIApplication.shared.delegate as! AppDelegate
+  let viewController = appDelegate.window!.rootViewController as! YourViewController
+  
+  // swift 4:
+  let viewController = UIApplication.shared.keyWindow!.rootViewController as! YourViewController
+  ```
