@@ -388,6 +388,9 @@ https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
 13. Container view programmatically
 
 ```swift
+ // Container view's viewDidLoad is called before the parent view conttroller
+ // so we want to override loadView instead, because loadView in parent is always called before child
+ 
  // add container
 
     let containerView = UIView()
