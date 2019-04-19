@@ -20,6 +20,9 @@ If you add tests, this also adds a new target.
 Usually, each target has at least one scheme
 You can autocreate schemes for your targets by going to Scheme > Manage Schemes and pressing "Autocreate Schemes Now"
 
+## Xcode Build Configuration
+
+https://www.talentica.com/blogs/ios-build-management-using-custom-build-scheme/
 
 ## Initializers
 
