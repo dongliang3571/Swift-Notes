@@ -2,6 +2,8 @@
 
 ## Workspace, Project, Target, Schema
 
+https://stackoverflow.com/questions/21631313/xcode-project-vs-xcode-workspace-differences
+
 `Workspace` - Contains one or more projects. These projects usually relate to one another
 
 `Project` - Contains code and resources, etc. (You'll be used to these!)
