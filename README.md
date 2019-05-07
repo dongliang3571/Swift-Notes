@@ -26,6 +26,12 @@ You can autocreate schemes for your targets by going to Scheme > Manage Schemes 
 
 https://medium.com/@Rageeni16/create-cocoa-touch-framework-and-publish-it-be9ad6535f33
 
+## Embedded binaries and Linked Frameworks and Libaries
+
+1. Linking- We must link a framework if we use any API defined in it.
+
+2. Embedding - This process will ensure the added framework will be embedded within the App bundle, and potentially will help sharing code between the app, and any extension bundles. We embed only third party frameworks and not the ones provided by iOS as they are readily available in the device. If we are embedding, that means that, we will need to link to them too so that Xcode can compile and create the build. When the app runs in the device, then the embedded framework will be loaded into memory when needed.
+
 ## Xcode Build Configuration
 
 https://www.talentica.com/blogs/ios-build-management-using-custom-build-scheme/
