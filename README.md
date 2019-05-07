@@ -38,6 +38,12 @@ how to group and reuse pods in Podfile
 
 https://www.natashatherobot.com/cocoapods-installing-same-pod-multiple-targets/
 
+## Xcode Build
+
+Xcode build says no scheme
+
+https://stackoverflow.com/questions/14368938/xcodebuild-says-does-not-contain-scheme
+
 ## Xcode Build Configuration
 
 https://www.talentica.com/blogs/ios-build-management-using-custom-build-scheme/
