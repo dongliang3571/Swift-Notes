@@ -22,6 +22,10 @@ If you add tests, this also adds a new target.
 Usually, each target has at least one scheme
 You can autocreate schemes for your targets by going to Scheme > Manage Schemes and pressing "Autocreate Schemes Now"
 
+## Cocoa Touch Framework and Cocoa touch static libraries
+
+https://medium.com/@Rageeni16/create-cocoa-touch-framework-and-publish-it-be9ad6535f33
+
 ## Xcode Build Configuration
 
 https://www.talentica.com/blogs/ios-build-management-using-custom-build-scheme/
