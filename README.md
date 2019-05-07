@@ -32,6 +32,12 @@ https://medium.com/@Rageeni16/create-cocoa-touch-framework-and-publish-it-be9ad6
 
 2. Embedding - This process will ensure the added framework will be embedded within the App bundle, and potentially will help sharing code between the app, and any extension bundles. We embed only third party frameworks and not the ones provided by iOS as they are readily available in the device. If we are embedding, that means that, we will need to link to them too so that Xcode can compile and create the build. When the app runs in the device, then the embedded framework will be loaded into memory when needed.
 
+## CocoaPods
+
+how to group and reuse pods in Podfile
+
+https://www.natashatherobot.com/cocoapods-installing-same-pod-multiple-targets/
+
 ## Xcode Build Configuration
 
 https://www.talentica.com/blogs/ios-build-management-using-custom-build-scheme/
