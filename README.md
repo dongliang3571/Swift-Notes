@@ -78,6 +78,8 @@ Marking a class as `open` explicitly indicates that you’ve considered the impa
 
 https://theswiftdev.com/2018/06/14/mastering-ios-auto-layout-anchors-programmatically-from-swift/
 
+https://theswiftdev.com/2017/10/31/ios-auto-layout-tutorial-programmatically/
+
 ## Initializers
 
   ```swift
