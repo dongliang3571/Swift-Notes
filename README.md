@@ -515,3 +515,29 @@ https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
   // swift 4:
   let viewController = UIApplication.shared.keyWindow!.rootViewController as! YourViewController
   ```
+
+## Animation
+
+Animation with constraints:
+
+https://medium.com/@aunnnn/animate-autolayout-constraints-separately-52eeb989a5cc
+
+you can simply animate different constraint changes in each animation block simultaneously. Just don’t forget to end with `layoutIfNeeded()` on each of the block.
+
+```
+UIView.animate(withDuration: 1) {
+  widthConstraint.constant = ...
+  heightConstaint.constant = ...
+  view.layoutIfNeeded() // flush all changes
+}
+UIView.animate(withDuration: 1, 
+               delay: 0, 
+               usingSpringWithDamping: 0.5, 
+               initialSpringVelocity: 0, 
+               options: [], 
+               animations: 
+{
+  topConstraint.constant = ...
+  view.layoutIfNeeded() // flush all changes
+}) { (finished) in }
+```
