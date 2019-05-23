@@ -524,7 +524,7 @@ https://medium.com/@aunnnn/animate-autolayout-constraints-separately-52eeb989a5c
 
 you can simply animate different constraint changes in each animation block simultaneously. Just don’t forget to end with `layoutIfNeeded()` on each of the block.
 
-```
+```swift
 UIView.animate(withDuration: 1) {
   widthConstraint.constant = ...
   heightConstaint.constant = ...
