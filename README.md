@@ -518,6 +518,26 @@ https://medium.com/@mimicatcodes/any-vs-anyobject-in-swift-3-b1a8d3a02e00
   let viewController = UIApplication.shared.keyWindow!.rootViewController as! YourViewController
   ```
 
+## About preferredInterfaceOrientationForPresentation
+
+`preferredInterfaceOrientationForPresentation` is never called because this is not a "presented" view controller. There is no "presentation" involved here.
+
+"Presented" and "presentation" are not some vague terms meaning "appears". These are precise, technical terms meaning that this view controller is brought into play with the call presentViewController:animated:completion:. In other words, this event arrives only if this is what we used to call a "modal" view controller.
+
+Well, your view controller is not a modal view controller; it is not brought into play with presentViewController:animated:completion:. So there is no "presentation" involved, and therefore preferredInterfaceOrientationForPresentation is irrelevant here.
+
+I'm being very explicit about this because I'm thinking that many folks will be confused or misled in the same way you were. So perhaps this note will help them.
+
+Launch into Landscape
+
+In iOS 6, the "Supported Interface Orientations" key in your Info.plist is taken much more seriously than previously. The solution to your overall problem of launching into a desired orientation is:
+
+Make sure that "Supported Interface Orientations" in your Info.plist lists all orientations your app will ever be allowed to assume.
+
+Make sure that the desired launch orientation is first within the "Supported Interface Orientations".
+
+That's all there is to it. You should not in fact have to put any code into the root view controller to manage the initial orientation.
+
 ## Animation
 
 Animation with constraints:
