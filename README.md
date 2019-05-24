@@ -211,6 +211,10 @@ https://theswiftdev.com/2017/10/31/ios-auto-layout-tutorial-programmatically/
 ![inherit_all_init](https://github.com/dongliang3571/Swift-Notes/blob/master/images/inherit_all_init.png?raw=true)
 
 
+## Copy on Write
+
+https://marcosantadev.com/copy-write-swift-value-types/
+
 ### Things I need to know
 
 https://github.com/codepath/ios_guides/wiki
