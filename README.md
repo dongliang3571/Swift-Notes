@@ -367,6 +367,11 @@ func wishHappyBirthday(to celebrator: PersonProtocol) {
 }
 ```
 
+
+### [weak self]
+
+https://medium.com/anysuggestion/preventing-memory-leaks-with-swift-compile-time-safety-49b845df4dc6
+
 ### Things I need to know
 
 https://github.com/codepath/ios_guides/wiki
