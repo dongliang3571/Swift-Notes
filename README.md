@@ -298,6 +298,26 @@ extension Container {
 in this case, method `prin()` can be used right away.
 
 
+Protocols can now constrain their conforming types
+
+```swift
+protocol MyView: UIView { /*...*/ } // swift 4
+
+// or
+
+protocol MyView where Self: UIView { /*...*/ } // swift 3 or older 
+```
+
+
+class-only protocol
+
+```swift
+protocol MyObj: AnyObject {} // swift 4
+
+// or
+
+protocol MyObj: class {} // swift 3 or older
+
 
 ### Things I need to know
 
