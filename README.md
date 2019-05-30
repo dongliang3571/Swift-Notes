@@ -274,7 +274,7 @@ The IntStack type implements all three of the Container protocol’s requirement
 
 Moreover, IntStack specifies that for this implementation of Container, the appropriate Item to use is a type of Int. The definition of typealias Item = Int turns the abstract type of Item into a concrete type of Int for this implementation of the Container protocol.
 
-### Protocal
+### Protocol
 
 ```swift
 protocol Container {
@@ -317,7 +317,55 @@ protocol MyObj: AnyObject {} // swift 4
 // or
 
 protocol MyObj: class {} // swift 3 or older
+```
 
+Protocol Composition
+
+```swift
+protocol Named {
+    var name: String { get }
+}
+protocol Aged {
+    var age: Int { get }
+}
+struct Person: Named, Aged {
+    var name: String
+    var age: Int
+}
+```
+
+Protocol compositions have the form `SomeProtocol & AnotherProtocol`. You can list as many protocols as you need, separating them with ampersands (`&`). In addition to its list of protocols, a protocol composition can also contain one class type, which you can use to specify a required superclass.
+
+for example:
+
+```swift
+
+struct Person: Named & Aged {
+    var name: String
+    var age: Int
+}
+
+// or
+
+typealias PersonProtocol = Named & Aged
+
+struct Person: PersonProtocol {
+    var name: String
+    var age: Int
+}
+
+// for function parameters
+
+func wishHappyBirthday(to celebrator: Named & Aged) {
+    print("Happy birthday, \(celebrator.name), you're \(celebrator.age)!")
+}
+
+// or 
+
+func wishHappyBirthday(to celebrator: PersonProtocol) {
+    print("Happy birthday, \(celebrator.name), you're \(celebrator.age)!")
+}
+```
 
 ### Things I need to know
 
