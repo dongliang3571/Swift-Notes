@@ -274,6 +274,31 @@ The IntStack type implements all three of the Container protocol’s requirement
 
 Moreover, IntStack specifies that for this implementation of Container, the appropriate Item to use is a type of Int. The definition of typealias Item = Int turns the abstract type of Item into a concrete type of Int for this implementation of the Container protocol.
 
+### Protocal
+
+```swift
+protocol Container {
+    associatedtype Item: Equatable
+    mutating func append(_ item: Item)
+    var count: Int { get }
+    subscript(i: Int) -> Item { get }
+}
+```
+
+extending a protocol doesn't mean adding more protocol method or properties, it simply adds new method that you can use right away.
+
+```swift
+extension Container {
+    func prin(){
+        print("print")
+    }
+}
+```
+
+in this case, method `prin()` can be used right away.
+
+
+
 ### Things I need to know
 
 https://github.com/codepath/ios_guides/wiki
