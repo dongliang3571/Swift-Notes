@@ -367,6 +367,9 @@ func wishHappyBirthday(to celebrator: PersonProtocol) {
 }
 ```
 
+### Enumeration with `if case let`
+
+https://alisoftware.github.io/swift/pattern-matching/2016/05/16/pattern-matching-4/
 
 ### [weak self]
 
