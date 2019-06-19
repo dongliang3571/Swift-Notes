@@ -88,6 +88,10 @@ https://www.swiftbysundell.com/posts/simple-swift-dependency-injection-with-func
 
 https://www.swiftbysundell.com/posts/capturing-objects-in-swift-closures
 
+## First class function
+
+https://www.swiftbysundell.com/posts/first-class-functions-in-swift
+
 ## Initializers
 
   ```swift
