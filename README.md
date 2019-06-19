@@ -84,6 +84,10 @@ https://theswiftdev.com/2017/10/31/ios-auto-layout-tutorial-programmatically/
 
 https://www.swiftbysundell.com/posts/simple-swift-dependency-injection-with-functions
 
+## Closures
+
+https://www.swiftbysundell.com/posts/capturing-objects-in-swift-closures
+
 ## Initializers
 
   ```swift
