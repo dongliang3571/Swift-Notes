@@ -80,6 +80,10 @@ https://theswiftdev.com/2018/06/14/mastering-ios-auto-layout-anchors-programmati
 
 https://theswiftdev.com/2017/10/31/ios-auto-layout-tutorial-programmatically/
 
+## Understanding the contentOffset and contentInset properties of the UIScrollView class
+
+https://fizzbuzzer.com/understanding-the-contentoffset-and-contentinset-properties-of-the-uiscrollview-class/
+
 ## Dependency injection
 
 https://www.swiftbysundell.com/posts/simple-swift-dependency-injection-with-functions
