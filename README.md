@@ -743,3 +743,7 @@ UIView.animate(withDuration: 1,
   view.layoutIfNeeded() // flush all changes
 }) { (finished) in }
 ```
+
+### modalTransitionStyle and modalPresentationStyle
+
+https://blog.csdn.net/a2331046/article/details/54706790
