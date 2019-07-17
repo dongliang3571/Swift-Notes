@@ -747,3 +747,5 @@ UIView.animate(withDuration: 1,
 ### modalTransitionStyle and modalPresentationStyle
 
 https://blog.csdn.net/a2331046/article/details/54706790
+
+https://happyteamlabs.com/blog/difference-of-overfullscreen-and-overcurrentcontext-modalpresentationstyle-in-ios/
