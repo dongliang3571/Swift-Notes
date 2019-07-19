@@ -749,3 +749,11 @@ UIView.animate(withDuration: 1,
 https://blog.csdn.net/a2331046/article/details/54706790
 
 https://happyteamlabs.com/blog/difference-of-overfullscreen-and-overcurrentcontext-modalpresentationstyle-in-ios/
+
+### TableView separator
+
+```swift
+tableView.separatorStyle = .singleLine
+tableView.separatorColor = .duckEggBlue
+tableView.separatorInset = UIEdgeInsets(top: 0, left: Layout.margin, bottom: 0, right: 0)
+```
