@@ -757,3 +757,7 @@ tableView.separatorStyle = .singleLine
 tableView.separatorColor = .duckEggBlue
 tableView.separatorInset = UIEdgeInsets(top: 0, left: Layout.margin, bottom: 0, right: 0)
 ```
+
+### `[unowned self]` and `[weak self]`
+
+https://medium.com/@kiran.jasvanee/difference-between-unowned-self-and-weak-self-in-swift-310c14961953
