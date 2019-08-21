@@ -296,6 +296,9 @@ Difference Between { get } and { get set }
 
 https://medium.com/@kahseng.lee123/difference-between-get-and-get-set-which-one-to-choose-719fe9ec7704
 
+Swift Protocols: Magic of Dynamic & Static methods dispatches
+
+https://medium.com/@PavloShadov/https-medium-com-pavloshadov-swift-protocols-magic-of-dynamic-static-methods-dispatches-dfe0e0c85509
 
 ```swift
 protocol Container {
