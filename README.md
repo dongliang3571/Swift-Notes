@@ -769,3 +769,12 @@ tableView.separatorInset = UIEdgeInsets(top: 0, left: Layout.margin, bottom: 0, 
 ### `[unowned self]` and `[weak self]`
 
 https://medium.com/@kiran.jasvanee/difference-between-unowned-self-and-weak-self-in-swift-310c14961953
+
+
+### signing certificate ###
+
+A signing certificate is a digital identity used for code signing during the build and archive process.
+
+A signing signing certificate includes the certificate with its public-private key pair issued by Apple, and is stored in your keychain. Because the private key is stored locally, protect it as you would an account password. An intermediate certificate is also required to be in your keychain to ensure that your certificate is issued by a certificate authority such as Apple.
+
+When you install Xcode, Apple’s intermediate certificates are added to your keychain for you. Then you use Xcode to create your signing certificate and sign your app. Your signing certificate is added to your keychain and the corresponding certificate is added to your developer account. If you enroll as an organization, the developer account shows all the certificates created by members of your team.
