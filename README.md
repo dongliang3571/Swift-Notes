@@ -773,6 +773,8 @@ https://medium.com/@kiran.jasvanee/difference-between-unowned-self-and-weak-self
 
 ### signing certificate ###
 
+https://medium.com/ios-os-x-development/ios-code-signing-provisioning-in-a-nutshell-d5b247760bef
+
 A signing certificate is a digital identity used for code signing during the build and archive process.
 
 A signing signing certificate includes the certificate with its public-private key pair issued by Apple, and is stored in your keychain. Because the private key is stored locally, protect it as you would an account password. An intermediate certificate is also required to be in your keychain to ensure that your certificate is issued by a certificate authority such as Apple.
