@@ -780,3 +780,16 @@ A signing certificate is a digital identity used for code signing during the bui
 A signing signing certificate includes the certificate with its public-private key pair issued by Apple, and is stored in your keychain. Because the private key is stored locally, protect it as you would an account password. An intermediate certificate is also required to be in your keychain to ensure that your certificate is issued by a certificate authority such as Apple.
 
 When you install Xcode, Apple’s intermediate certificates are added to your keychain for you. Then you use Xcode to create your signing certificate and sign your app. Your signing certificate is added to your keychain and the corresponding certificate is added to your developer account. If you enroll as an organization, the developer account shows all the certificates created by members of your team.
+
+Important: When ceriticate is created, a private key is also created, and the key is only available to the machines creates the certificate. If you want to share the ceritificate you need to export it with file extension .p12, and it will contain the private key. If you download the certificate from apple develop site, it won’t contain the private key.
+
+there are mainly two types of certificates:
+- Development
+- Distribution (For app store) 
+
+Double click the file to install the certificate to your machine.
+
+Once you have the certificate, you need to create the provisioning profile using the certificate on the apple developer site.
+
+Once you created the profile, you can either downloda the profile and import it to Xcode, or using the Download Manual Profile button from Xcode preferences.
+
